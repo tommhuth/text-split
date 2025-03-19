@@ -1,0 +1,20 @@
+.splitText {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 .25em;
+	line-height: 1.4;
+	--line-index: 0;
+	--word-index: 0;
+	--line-word-index: 0;
+
+	> div {
+		--ready: 0;
+		--complete: 0;
+		transition-property: opacity, translate;
+		transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+		transition-duration: calc(.85s * var(--ready) * (1 - var(--complete)));
+		transition-delay: calc(var(--line-index) * 95ms * (1 - var(--complete)));
+		translate: 0 calc((1 - var(--ready)) * 1em);
+		opacity: var(--ready);
+	}
+}
