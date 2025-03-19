@@ -71,8 +71,7 @@ export function SplitText({ children, className, separator = ' ' }: SplitTextPro
 			ref={ref}
 			role="presentation"
 			aria-hidden
-		>
-			{/* eslint-disable-next-line react/no-children-map */}
+		> 
 			{Children.map(children, (child, index) => {
 				// primitive values are split by space
 				if (typeof child === 'string' || typeof child === 'number' || typeof child === 'boolean') {
@@ -95,8 +94,7 @@ export function SplitText({ children, className, separator = ' ' }: SplitTextPro
 
 				// other elements are wrapped and left as is
 				return (
-					<div
-						// eslint-disable-next-line react/no-array-index-key
+					<div 
 						key={index}
 						onTransitionEnd={onTransitionEnd}
 					>
