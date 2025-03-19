@@ -1,8 +1,7 @@
 .splitText {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0 .25em;
-	line-height: 1.4;
+	gap: 0 .25em; 
 	--line-index: 0;
 	--word-index: 0;
 	--line-word-index: 0;
